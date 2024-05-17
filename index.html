@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.plot.ly/plotly-2.29.1.min.js" charset="utf-8"></script>
+    <style>
+        input[type="number"] {
+            width: 250px;
+            padding: 10px;
+        }
+    </style>
+    <title>Кольца Ньютона</title>
+</head>
+
+<body>
+<form onsubmit="return CountFunction(this)" method ="post">
+    <label>Радиус линзы (м)</label>
+    <input  type="number" min="0" max="5" step="0.01" id="R">
+    <br><br>
+
+    <label>Показатель преломления линзы:</label>
+    <input type="number" min="1" max="3"  step="0.01" id="n1">
+    <br><br>
+
+    <label>Показатель преломления пластины:</label>
+    <input type="number" min="1" max="3"  step="0.01" id="n3">
+    <br><br>
+
+    <label>Показатель преломления среды между ними:</label>
+    <input type="number" min="1" max="3"  step="0.01" id="n2">
+    <br><br>
+
+    <label>Длина волны (нм):</label>
+    <input type="number" min="0" max="1000" step="0.01" id="lambda">
+    <br><br>
+
+    <input type="submit"  value="Построить график">
+</form>
+
+<div id="message"></div>
+<div id="myDiv"></div>
+<script src="index.js"></script>
+</body>
+
+</html>
